@@ -1,6 +1,8 @@
 # streamlit_test
+# https://srscherer-cyc-testing-streamlit-test-3stp49.streamlit.app/
 
 import streamlit as st
+import numpy as np
 import pandas as pd
 
 df = pd.DataFrame({
@@ -13,9 +15,8 @@ st.write(df)
 
 st.write("Heres an example of plotting a time chart for filler data:")
 
-timeChart = pd.DataFrame({
-    'Application Cycle': ["Fall 2020", "Spring 2021", "Fall 2021", "Spring 2022", "Fall 2022", "Spring 2023"],
-    'Acceptance Rate': [50.5, 45.6, 33.4, 39, 21, 18]
-})
+chart_data = pd.DataFrame(
+     [50.6, 43.5, 34.7, 30.2, 28.4, 20, 23, 18],
+     columns=['Acceptance Rate'])
 
-st.line_chart(timeChart)
+st.line_chart(chart_data)
