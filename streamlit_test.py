@@ -70,7 +70,8 @@ st.subheader("Pulling data from a Google Sheets")
 def load_data(sheets_url):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
     return pd.read_csv(csv_url)
-df = load_data("https://docs.google.com/spreadsheets/d/1hRBqJrxF99JjLNzA1w4go0-hDp4jVofAb0SoddPTLis/edit?usp=sharing")
+df2 = load_data("https://docs.google.com/spreadsheets/d/1hRBqJrxF99JjLNzA1w4go0-hDp4jVofAb0SoddPTLis/edit#gid=0")
 # Print results.
-for row in df.itertuples():
-    st.write(f"{row.name} has a :{row.pet}:")
+st.write(df2)
+
+    
